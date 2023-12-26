@@ -1,0 +1,21 @@
+# HttpServletRequest
+- HTTP Request 메세지를 개발자가 직접 파싱해서 사용할 수도 있으나 매우 불편함. Servlet은 개발자가 HTTP Request 메세지를 편리하게 사용할 수 있도록 개발자 대신 HTTP Request 메세지를 파싱해줌 그리고 그 결과를 HttpServletRequest 객체에 담아서 제공함
+- HttpServletRequest, Response 둘 다 HTTP 스펙에 대한 이해가 있어야 두 객체의 기능에 대한 깊은 이해가 가능하다
+- Http Request Message
+  - START LINE
+    - HTTP Method
+    - URL
+    - Query String
+    - Scheme, Protocol
+  - Header
+    - Host, Content-Type
+  - Body 
+    - form parameter
+    - message body
+- HttpServletRequest의 추가 기능
+  - 임시 저장소
+    - 해당 HTTP 요청이 시작될 때부터 끝날 때 까지 유지되는 임시 저장 기능
+    - HttpServletRequest.setAttribute(name(key), value)
+    - HttpServletRequest.getAttribute(name(key))
+  - Session 관리
+    - HttpServletRequest.getSession()
