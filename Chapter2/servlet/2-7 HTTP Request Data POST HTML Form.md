@@ -1,0 +1,14 @@
+# HTTP Request Data POST HTML Form
+- content-type:application/x-www-form-urlencoded 가 헤더에 있어야함
+- 메세지 바디에 쿼리 파라미터 형식으로 데이터를 전달 (username=hello&age=20)
+- Form Data 항목으로 보냄
+- 어쨌거나 쿼리 파라미터로 보내기 때문에 getParameter(), getParameterValues() 등으로 값을 꺼낼 수 있음
+  - 쿼리 파라미터 조회 메서드를 그대로 사용
+- POST의 HTML Form을 사용하면 브라우저는 다음과 같은 HTTP Message를 작성함
+  - 요청 URL:Form 데이터가 전송될 URL
+  - content-type:application/x-www-form-urlencoded
+  - HTTP Message Body:Query Parameter
+  - GET URL Query Parameter 방식은 HTTP Message Body 사용 안하기 때문에 content-type 이 없음
+  - -> HTTP Message Body를 사용할 때만 content-type을 설정함
+  - HTML 스펙 상 Form은 GET/POST만 지원
+    - 스프링을 사용했을 때 히든 필드로 타 메서드를 지정해줄 수 있음 하지만 실제 전송은 GET/POST로, 매칭되는 컨트롤러만 해당 메서드 관련 컨트롤러로 지정해줌
