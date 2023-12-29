@@ -16,7 +16,20 @@
       - View에 출력할 데이터를 담는 역할
       - Model이 데이터를 View로 전달하기 때문에 View는 비즈니스 로직, 데이터 접근 등을 몰라도 됨
         - 화면 렌더링에 집중 가능
-      - DTO, VO 등의 객체
+      - DTO, VO 등의 객체(Servlet에서는 HttpServletRequest 객체가 역할을 수행할 수도 있음)
     - View 
       - Model에 담긴 데이터를 사용해서 화면을 렌더링함
         - HTML, XML등을 생성
+  - 반드시 HTTP 요청이 Controller에 도달해야함
+
+## Servlet, JSP만 사용하는 MVC 패턴의 단점
+- RequestDispatcher.forward() 메서드가 중복됨
+- viewPath의 중복
+  - /WEB-INF/views, .jsp 가 중복됨
+  - 템플릿 엔진 변경 시 모든 파일을 다 변경해야함
+- 사용하지 않는 코드 존재
+  - HttpServletResponse가 거의 사용되지 않음 -> JSP 사용하기 때문에
+- 공통 처리가 어려움
+  - 공통 기능을 메서드로 분리해도 이를 항상 호출해야함
+  - Controller 호출 전에 공통 기능을 처리해야함
+    - 프론트 컨트롤러 패턴을 도입해서 이 문제를 해결할 수 있음

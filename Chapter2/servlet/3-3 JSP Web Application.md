@@ -9,6 +9,9 @@
 - <% %>는 자바 코드 입력
 - <%= %> 는 차바 코드의 결과값 출력
 - <%@ page import="패키지 경로" %> 는 패키지 임포트 문법
+- ${} 라는 표현식 기능 제공
+- 반복문, 분기 처리 등은 JSTL 이라는 확장 라이브러리 사용
+  - <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 태그를 JSP 파일 상단에 추가해야함
 ## Servlet, JSP의 한계
 - Servlet의 한계
   - 화면 렌더링을 위한 HTML 생성 작업이 자바 코드에 섞여서 지저분하고 복잡함
