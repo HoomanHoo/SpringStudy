@@ -1,0 +1,23 @@
+# JSP Web Application
+- Servlet은 자바 코드를 중심으로 HTML을 입력
+- JSP는 HTML을 중심으로 자바 코드를 입력
+  - HTML이 비교적 깔끔해짐
+  - 동적으로 생성해야하는 부분은 자바 코드를 이용하여 생성
+- JSP는 내부에서 Servlet으로 변환됨
+- request, response, out 등의 예약어가 존재
+- <%@ page contentType="text/html;charset=UTF-8" language="java" %> 를 달아줘야 JSP로 인식
+- <% %>는 자바 코드 입력
+- <%= %> 는 차바 코드의 결과값 출력
+- <%@ page import="패키지 경로" %> 는 패키지 임포트 문법
+## Servlet, JSP의 한계
+- Servlet의 한계
+  - 화면 렌더링을 위한 HTML 생성 작업이 자바 코드에 섞여서 지저분하고 복잡함
+  - 개발자가 실수를 할 가능성이 높아짐
+- JSP의 한계
+  - 비즈니스 로직 처리와 화면 렌더링이 뒤섞여있음
+    - JSP가 너무 많은 역할을 함
+    - 수정하다가 비즈니스 로직 건드릴 가능성 존재
+    - 파일이 비대해짐
+- 이로 인해 MVC 패턴 등장
+  - Model, View, Controller 로 구성
+  - JSP는 화면 렌더링만 전담하도록 함
