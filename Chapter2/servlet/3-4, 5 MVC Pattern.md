@@ -11,6 +11,7 @@
     - Controller
       - HTTP 요청에 대한 파라미터 검증, 비즈니스 로직 실행, Model에 View로 전달할 데이터 적재
       - 비즈니스 로직은 따로 떼어서 Service 계층으로 분리를 시키기도 함 -> Controller에 비즈니스 로직을 둘 경우 너무 방대해질 수 있기 때문
+      - Service 계층에 @Business 어노테이션을 만들어서 더욱 세분화 하기도 함
       - 데이터 베이스에 접근하는 코드는 Repository 계층으로 분리를 시키기도 함 -> Service 계층 분리와 같은 이유
     - Model
       - View에 출력할 데이터를 담는 역할
