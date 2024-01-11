@@ -12,6 +12,7 @@ public class MemberListControllerV3 implements ControllerV3 {
   private MemberRepository memberRepository = MemberRepository.getInstance();
   @Override
   public ModelView process(Map<String, String> paraMap) {
+    System.out.println("List Controller V3");
     List<Member> members = memberRepository.findAll();
     ModelView modelView = new ModelView("members");
     modelView.getModel().put("members", members);
