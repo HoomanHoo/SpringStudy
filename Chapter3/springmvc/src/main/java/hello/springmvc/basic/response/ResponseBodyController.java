@@ -38,7 +38,8 @@ public class ResponseBodyController {
         HelloData helloData = new HelloData();
         helloData.setUsername("lee");
         helloData.setAge(14);
-        return new ResponseEntity<>(helloData, HttpStatus.OK);  // 조건에 따라 상태코드를 동적으로 바꾸기 위해서는 ResponseEntity를 사용하는 것이 낫다
+        return new ResponseEntity<>(helloData, HttpStatus.OK);
+        // 조건에 따라 상태코드를 동적으로 바꾸기 위해서는 ResponseEntity를 사용하는 것이 낫다
     }
 
     @ResponseStatus(HttpStatus.OK)// @ResponseBody에서 같이 써서 상태코드를 전달할 수 있다

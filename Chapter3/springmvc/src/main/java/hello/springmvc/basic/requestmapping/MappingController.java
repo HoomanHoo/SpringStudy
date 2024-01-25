@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
@@ -29,7 +30,7 @@ public class MappingController {
      * /mapping/userA
      */
     @GetMapping("/mapping/{userId}")
-    public String mappingPath(@PathVariable String userId){
+    public String mappingPath(@PathVariable(value = "userId", required = false) String userId){
         log.info("mappingPath userId={}", userId);
         return userId;
     }
@@ -54,7 +55,8 @@ public class MappingController {
      * param="!mode"
      * param="mode!=info"
      */
-    @GetMapping(value = "/mapping-param", params = "mode=debug")
+    //@GetMapping(value = "/mapping-param", params = "mode=debug")
+    @RequestMapping(value = "/mapping-param", params = "mode=debug", headers = "mode=debug", consumes = "application/json", produces = "text/plain", method = RequestMethod.GET)
     public String mappingParams(){
         log.info("mappingParam");
         return "mappingparam";

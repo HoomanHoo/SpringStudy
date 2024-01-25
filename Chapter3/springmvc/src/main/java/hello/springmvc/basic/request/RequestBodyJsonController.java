@@ -56,7 +56,7 @@ public class RequestBodyJsonController {
     // @RequestBody에 JSON 데이터를 바인딩할 객체를 바로 지정해줄 수도 있음
     // Http Header에 Content-Type application/json이라는 헤더가 있을 경우에 해당
     // Content-Type 헤더가 application/json이 아닐 경우 "status": 415, "error": "Unsupported Media Type", 에러 메세지 리턴
-    // @RequestBody는 생략해줄 수 없음 -> 생략할 경우 ModelAttribute를 적용
+    // @RequestBody는 생략해줄 수 없음 -> 생략할 경우 @ModelAttribute를 적용
         log.info("messageBody={}", helloData);
         log.info("username={}, age={}", helloData.getUsername(), helloData.getAge());
         return "request-body-json-v3";
