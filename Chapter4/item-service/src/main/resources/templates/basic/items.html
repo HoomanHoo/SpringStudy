@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link th:href="@{/css/bootstrap.min.css}"
+      href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- 타임리프 태그는 기존 태그를 덮어씌우고 동작함 -->
+</head>
+<body>
+<div class="container" style="max-width: 600px">
+  <div class="py-5 text-center">
+    <h2>상품 목록</h2>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-primary float-end"
+              onclick="location.href='addForm.html'"
+              th:onclick="|location.href='@{/basic/items/add}'|"
+              type="button">상품 등록
+      </button>
+    </div>
+  </div>
+  <hr class="my-4">
+  <div>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>상품명</th>
+        <th>가격</th>
+        <th>수량</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr th:each="item : ${items}">
+          <td><a href="item.html" th:text="${item.id}" th:href="@{/basic/items/{itemId}(itemId=${item.id})}">1</a></td>
+          <td><a href="item.html" th:text="${item.itemName}" th:href="@{|/basic/items/${item.id}|}">테스트 상품1</a></td>
+          <!-- 두 th:href 링크 표현식은 같은 결과를 나타냄 -->
+          <td th:text="${item.price}">10000</td>
+          <td th:text="${item.quantity}">10</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> <!-- /container -->
+
+<script src=""  defer></script>
+</body>
+</html>

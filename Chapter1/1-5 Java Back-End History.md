@@ -18,7 +18,7 @@
     - @Controller
     - 예시 코드
     
-    ```jsx
+    ```
     @Controller
     public class AutoOrderSettingProHandler implements CommandHandler{
     
