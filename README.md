@@ -31,6 +31,8 @@
 
 [4-1 프론트 컨트롤러 패턴](https://www.notion.so/4-1-d77984544e6240c1a86b238ef2e5f3dd?pvs=21)
 
-[5- 1 스프링 MVC의 구조](https://www.notion.so/5-1-MVC-c95d895b607745ed829b8d78dfa1978e?pvs=21)
+[5-1 스프링 MVC의 구조](https://www.notion.so/5-1-MVC-c95d895b607745ed829b8d78dfa1978e?pvs=21)
 
 [6-1 스프링 MVC 기본 기능](https://www.notion.so/6-1-MVC-80192aa700c1433fa1672d53a5bb62c8?pvs=21)
+
+[7-1 웹 페이지 만들기](https://www.notion.so/7-1-585ffdcf0211484a875876a49b2a8176?pvs=21)
